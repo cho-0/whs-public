@@ -22,14 +22,19 @@ TCP PACKET found
 
 <Ethernet Header>
 src mac: 
+
 dst mac: 
+
 
 <IP Header>
 src ip: 
+
 dst ip: 
+
 
 <TCP Header>
 src port: 80 (http)
+
 dst port: (포트번호)
 
 TCP flags: (플래그 목록)
