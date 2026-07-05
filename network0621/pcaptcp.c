@@ -47,6 +47,16 @@ void got_packet(u_char *args, const struct pcap_pkthdr *header,
     printf("src port: %d\n", ntohs(tcp->tcp_sport));
     printf("dst port: %d\n\n", ntohs(tcp->tcp_dport));
 
+    printf("TCP flags: ");
+
+    if (tcp->tcp_flags & TH_SYN) printf("SYN ");
+    if (tcp->tcp_flags & TH_ACK) printf("ACK ");
+    if (tcp->tcp_flags & TH_FIN) printf("FIN ");
+    if (tcp->tcp_flags & TH_PUSH) printf("PSH ");
+    if (tcp->tcp_flags & TH_RST) printf("RST ");
+
+    printf("\n");
+
     printf("<HTTP Message>\n");
     if (payload_len > 0) {
     for (int i = 0; i < payload_len; i++) {
