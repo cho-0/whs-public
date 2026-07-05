@@ -17,7 +17,7 @@ ip, tcp에 해당하는 것만 남김
 - https://github.com/pwnhyo/network_security_codes/blob/main/Sniffing_Spoofing/C_sniff/sniff_improved.c
 
 출력 형식:
-'''
+```
 TCP PACKET found
 
 <Ethernet Header>
@@ -40,9 +40,9 @@ dst port: (포트번호)
 TCP flags: (플래그 목록)
 
 <HTTP Message>
-'''
+```
 
 ## 컴파일
-'''
+```
 gcc pcaptcp.c -o pcaptcp -lpcap
-'''
+```
